@@ -1,0 +1,12 @@
+что бы скрипт сработал нужно создать на компе текстовый файл с называнием: assig8data.txt и вставить в него содержимое ниже.
+
+
+#!/bin/bash
+
+sudo amazon-linux-extras install nginx1.12 -y
+systemctl start nginx
+systemctl enable nginx
+wget -O /usr/share/nginx/html/alexabuy.jpg https://i.redd.it/v7exkf93r34z.jpg
+echo "<html>" > /usr/share/nginx/html/index.html
+echo '<img src="alexabuy.jpg" alt="Alexa Buy Whole Foods">' >> /usr/share/nginx/html/index.html
+echo "<html>" >> /usr/share/nginx/html/index.html
